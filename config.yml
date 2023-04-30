@@ -5,7 +5,7 @@ accounts:
   - 200000000test
 - name: bob  
   coins:
-  - 100000000stake
+  - 100000000test
 client:
   openapi:
     path: docs/static/openapi.yml
