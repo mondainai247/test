@@ -5,14 +5,14 @@ accounts:
   - 200000000test
 - name: bob  
   coins:
-  - 100000000test
+  - 100000000000000test
 client:
   openapi:
     path: docs/static/openapi.yml
 faucet:
   name: bob
   coins:
-  - 100000test
+  - 1000000000000000test
 validators:
 - name: alice
   bonded: 100000000test   
