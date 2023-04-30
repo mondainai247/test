@@ -2,11 +2,9 @@ version: 1
 accounts:
 - name: alice
   coins:
-  - 20000token
-  - 200000000stake
-- name: bob
+  - 200000000test
+- name: bob  
   coins:
-  - 10000token
   - 100000000stake
 client:
   openapi:
@@ -14,8 +12,27 @@ client:
 faucet:
   name: bob
   coins:
-  - 5token
-  - 100000stake
+  - 100000test
 validators:
 - name: alice
-  bonded: 100000000stake
+  bonded: 100000000test   
+  config:
+      consensus:
+        timeout_commit: "30s"
+        timeout_propose: "30s"
+genesis:
+  app_state:
+    staking:
+      params:
+        bond_denom: "test"
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "10000000"
+            denom: "test"
+    crisis:
+      constant_fee:
+        denom: "test"
+    mint:
+      params:
+        mint_denom: "test"
